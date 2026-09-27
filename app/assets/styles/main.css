@@ -83,4 +83,11 @@ html, body {
     font-family: sans-serif;
     height: 100dvh;
     width: 100%;
+    overflow: hidden;
+}
+
+body > div,
+#__nuxt {
+    height: 100dvh;
+    overflow: hidden;
 }

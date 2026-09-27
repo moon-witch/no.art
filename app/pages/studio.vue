@@ -206,7 +206,7 @@ onMounted(loadQuotes)
 </template>
 
 <style scoped>
-.studio-page { min-height: 100dvh; box-sizing: border-box; padding: clamp(1.25rem, 4vw, 4rem); background: #0c0a15; color: rgb(255 255 255 / 86%); }
+.studio-page { height: 100dvh; box-sizing: border-box; overflow: auto; padding: clamp(1.25rem, 4vw, 4rem); background: #0c0a15; color: rgb(255 255 255 / 86%); }
 .studio-page__header { position: relative; margin-bottom: 2.5rem; }
 .studio-page__header p, .studio-page__header h1 { margin: 0; }
 .studio-page__header p { font-size: 1.4rem; opacity: .72; }
