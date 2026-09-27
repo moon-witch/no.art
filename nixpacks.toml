@@ -1,0 +1,15 @@
+[variables]
+NIXPACKS_NODE_VERSION = "22"
+NODE_ENV = "production"
+NITRO_HOST = "0.0.0.0"
+NITRO_PORT = "3000"
+
+[phases.install]
+cmds = ["pnpm install --frozen-lockfile --prod=false"]
+
+[phases.build]
+cmds = ["pnpm build"]
+cacheDirectories = ["node_modules/.cache"]
+
+[start]
+cmd = "node .output/server/index.mjs"
