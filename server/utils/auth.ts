@@ -36,14 +36,14 @@ export const hashOwnerPassword = (password: string) => {
   const salt = randomBytes(16).toString('base64url')
   const hash = scryptSync(password, salt, 64).toString('base64url')
 
-  return `scrypt$${salt}$${hash}`
+  return `scrypt.${salt}.${hash}`
 }
 
 export const verifyOwnerPassword = (password: string) => {
-  const [algorithm, salt, expectedHash] = required('OWNER_PASSWORD_HASH').split('$')
+  const [algorithm, salt, expectedHash] = required('OWNER_PASSWORD_HASH').split(/[.$]/)
 
   if (algorithm !== 'scrypt' || !salt || !expectedHash) {
-    throw new Error('OWNER_PASSWORD_HASH must use the scrypt$<salt>$<hash> format')
+    throw new Error('OWNER_PASSWORD_HASH must use the scrypt.<salt>.<hash> format')
   }
 
   const actualHash = scryptSync(password, salt, 64).toString('base64url')
@@ -74,7 +74,7 @@ export const readOwnerSession = (token: string | undefined): OwnerSession | unde
   try {
     const session = JSON.parse(fromBase64Url(payload)) as OwnerSession
 
-    if (session.email !== required('OWNER_EMAIL') || session.expiresAt <= Date.now()) {
+    if (session.email !== required('OWNER_EMAIL').trim().toLowerCase() || session.expiresAt <= Date.now()) {
       return undefined
     }
 
