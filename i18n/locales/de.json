@@ -1,0 +1,37 @@
+{
+  "home": {
+    "headline": "bleib eine weile",
+    "subheadline": "es gibt Dinge zu ",
+    "loopWords": {
+      "see": "sehen",
+      "read": "lesen",
+      "find": "finden",
+      "hear": "hören"
+    },
+    "introductionLabel": "Über mich",
+    "introduction": "Moin,\nich bin Joshua.\nWillkommen in meiner Welt!\n\nHier findest du alles, was mich so bewegt: Meine liebsten Zitate mit meinen Gedanken dazu, ein Hologramm unseres wunderschönen Planeten mit meinen Lieblingsorten und in Zukunft noch vieles mehr.\n\nViel Spaß beim Erkunden."
+  },
+  "navigation": {
+    "label": "Hauptnavigation",
+    "home": "Start",
+    "language": "Sprache",
+    "switchToEnglish": "Switch language to English",
+    "switchToGerman": "Sprache auf Deutsch wechseln",
+    "thoughts": {
+      "label": "Gedanken",
+      "description": "Zitate und meine Gedanken dazu."
+    },
+    "earth": {
+      "label": "Erde",
+      "description": "Orte, die ich bei mir trage."
+    }
+  },
+  "thoughts": {
+    "eyebrow": "Gedanken",
+    "title": "Ein Feld voller Dinge, bei denen man verweilen kann."
+  },
+  "earth": {
+    "eyebrow": "Erde",
+    "title": "Orte, die in Bewegung bleiben."
+  }
+}

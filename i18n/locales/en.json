@@ -1,0 +1,37 @@
+{
+  "home": {
+    "headline": "stay a while",
+    "subheadline": "there are things to ",
+    "loopWords": {
+      "see": "see",
+      "read": "read",
+      "find": "find",
+      "hear": "hear"
+    },
+    "introductionLabel": "Introduction",
+    "introduction": "Hey,\nI am Joshua.\nWelcome to my world!\n\nHere you find everything that shapes me: My favorite quotes and my thoughts about them, a hologram of our beautiful planet with my favorite places and in the future there will be so much more.\n\nHave fun exploring."
+  },
+  "navigation": {
+    "label": "Main navigation",
+    "home": "Home",
+    "language": "Language",
+    "switchToEnglish": "Switch language to English",
+    "switchToGerman": "Sprache auf Deutsch wechseln",
+    "thoughts": {
+      "label": "Thoughts",
+      "description": "Quotes and reflections to stay with."
+    },
+    "earth": {
+      "label": "Earth",
+      "description": "Places I have carried with me."
+    }
+  },
+  "thoughts": {
+    "eyebrow": "Thoughts",
+    "title": "A field of things to stay with."
+  },
+  "earth": {
+    "eyebrow": "Earth",
+    "title": "Places that remain in motion."
+  }
+}

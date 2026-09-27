@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Moon Flower';
+    src: url('../fonts/moon-flower-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moon Flower';
+    src: url('../fonts/moon-flower-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Going To Do Great Things';
+    src: url('../fonts/going-to-do-great-things.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'A Song for Jennifer';
+    src: url('../fonts/a-song-for-jennifer-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Please Write Me a Song';
+    src: url('../fonts/please-write-me-a-song.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Simple Handmade';
+    src: url('../fonts/simple-handmade.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'A Song for Jennifer';
+    src: url('../fonts/a-song-for-jennifer-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-moon-flower {
+    font-family: 'Moon Flower', cursive;
+}
+
+.font-going-to-do-great-things {
+    font-family: 'Going To Do Great Things', cursive;
+    font-size: 30px;
+}
+
+.font-a-song-for-jennifer {
+    font-family: 'A Song for Jennifer', cursive;
+}
+
+.font-please-write-me-a-song {
+    font-family: 'Please Write Me a Song', cursive;
+}
+
+.font-simple-handmade {
+    font-family: 'Simple Handmade', cursive;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    height: 100dvh;
+    width: 100%;
+}
