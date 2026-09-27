@@ -43,13 +43,12 @@ const login = async () => {
         <form class="studio-login__panel" @submit.prevent="login">
           <button class="studio-login__close" type="button" :aria-label="t('studio.close')" @click="close">×</button>
           <p class="studio-login__eyebrow font-moon-flower">{{ t('studio.eyebrow') }}</p>
-          <h2 class="font-simple-handmade">{{ t('studio.loginTitle') }}</h2>
           <label>
-            <span>{{ t('studio.email') }}</span>
+            <span class="font-simple-handmade">{{ t('studio.email') }}</span>
             <input v-model="email" type="email" autocomplete="email" required>
           </label>
           <label>
-            <span>{{ t('studio.password') }}</span>
+            <span class="font-simple-handmade">{{ t('studio.password') }}</span>
             <input v-model="password" type="password" autocomplete="current-password" required>
           </label>
           <p v-if="error" class="studio-login__error" role="alert">{{ error }}</p>
@@ -96,6 +95,7 @@ const login = async () => {
 .studio-login h2,
 .studio-login p {
   margin: 0;
+  text-align: center;
 }
 
 .studio-login__eyebrow { opacity: .72; font-size: 1.35rem; }
@@ -120,7 +120,7 @@ const login = async () => {
 .studio-login__error { color: rgb(255 176 195); font-size: .9rem; }
 
 .studio-login__submit {
-  justify-self: start;
+  justify-self: center;
   padding: .5rem 1.1rem;
   border: 1px solid rgb(255 255 255 / 42%);
   border-radius: 999px;
