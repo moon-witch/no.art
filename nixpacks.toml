@@ -12,4 +12,4 @@ cmds = ["pnpm build"]
 cacheDirectories = ["node_modules/.cache"]
 
 [start]
-cmd = "node .output/server/index.mjs"
+cmd = "pnpm db:migrate && node .output/server/index.mjs"
