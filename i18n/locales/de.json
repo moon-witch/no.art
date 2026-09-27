@@ -13,7 +13,7 @@
   },
   "navigation": {
     "label": "Hauptnavigation",
-    "home": "Start",
+    "home": "Home",
     "language": "Sprache",
     "switchToEnglish": "Switch language to English",
     "switchToGerman": "Sprache auf Deutsch wechseln",
@@ -33,5 +33,39 @@
   "earth": {
     "eyebrow": "Erde",
     "title": "Orte, die in Bewegung bleiben."
+  },
+  "studio": {
+    "open": "Privates Studio öffnen",
+    "close": "Schließen",
+    "eyebrow": "Privates Studio",
+    "loginTitle": "Willkommen zurück",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "login": "Eintreten",
+    "loggingIn": "Eintreten…",
+    "loginError": "E-Mail oder Passwort stimmen nicht.",
+    "title": "Studio",
+    "newQuote": "Neues Zitat",
+    "editQuote": "Zitat bearbeiten",
+    "allQuotes": "Zitate",
+    "quote": "Zitat",
+    "attribution": "Urheber:in",
+    "imageAlt": "Bildbeschreibung",
+    "reflectionEnglish": "Gedanke (Englisch)",
+    "reflectionGerman": "Gedanke (Deutsch)",
+    "displayOrder": "Reihenfolge",
+    "status": "Status",
+    "draft": "Entwurf",
+    "published": "Veröffentlicht",
+    "image": "Bild",
+    "uploadImage": "Bild hochladen",
+    "save": "Zitat speichern",
+    "saving": "Speichert…",
+    "delete": "Löschen",
+    "signOut": "Abmelden",
+    "empty": "Noch keine Zitate vorhanden.",
+    "saved": "Gespeichert.",
+    "saveError": "Das Zitat konnte nicht gespeichert werden.",
+    "uploadError": "Das Bild konnte nicht hochgeladen werden. Nutze JPEG, PNG, WebP oder AVIF unter 10 MB."
   }
 }

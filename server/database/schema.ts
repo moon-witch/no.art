@@ -37,8 +37,10 @@ export const quotes = pgTable('quotes', {
   quoteText: text('quote_text').notNull(),
   attribution: text('attribution').notNull(),
   reflection: jsonb('reflection').$type<LocalizedText>().notNull(),
-  desktopPlacement: jsonb('desktop_placement').$type<{ x: number, y: number, scale?: number }>().notNull(),
-  mobilePlacement: jsonb('mobile_placement').$type<{ x: number, y: number, scale?: number }>().notNull(),
+  // The public image field derives a stable, bounded position from the viewport.
+  // These legacy fields remain optional so older content can still be imported.
+  desktopPlacement: jsonb('desktop_placement').$type<{ x: number, y: number, scale?: number }>(),
+  mobilePlacement: jsonb('mobile_placement').$type<{ x: number, y: number, scale?: number }>(),
   publishedAt: timestamp('published_at', { withTimezone: true }),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
   updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),

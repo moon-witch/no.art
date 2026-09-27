@@ -22,6 +22,7 @@ const shouldPlayIntro = ref(!hasHomeIntroPlayed.value)
 const isSettled = ref(hasHomeIntroPlayed.value)
 const isSettling = ref(false)
 const homeNavigationReady = useHomeScene()
+const studioLogin = useStudioLogin()
 let settleTimer: ReturnType<typeof setTimeout> | undefined
 let settleMotionTimer: ReturnType<typeof setTimeout> | undefined
 
@@ -116,6 +117,16 @@ onBeforeUnmount(() => {
         {{ t('home.introduction') }}
       </p>
     </section>
+
+    <button
+        class="home-page__portrait-bubble"
+        :class="{ 'home-page__portrait-bubble--visible': isSettled }"
+        type="button"
+        :aria-label="t('studio.open')"
+        @click="studioLogin = true"
+    >
+      <img src="/me.jpeg" alt="">
+    </button>
   </main>
 </template>
 
@@ -225,6 +236,59 @@ onBeforeUnmount(() => {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.home-page__portrait-bubble {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: clamp(6.25rem, 11.5vw, 9.75rem);
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 58%);
+  border-radius: 49% 51% 48% 52% / 52% 48% 52% 48%;
+  box-shadow:
+      inset 0 0 18px rgb(255 255 255 / 28%),
+      0 0 22px rgb(229 221 255 / 28%);
+  opacity: 0;
+  transform: translate(-50%, calc(-50% - (var(--center-circle-size) * 0.58))) scale(0.72);
+  transition:
+      opacity 750ms ease 500ms,
+      transform 1100ms cubic-bezier(.16, 1, .3, 1) 500ms;
+  animation: portrait-bubble-distort 8.8s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.home-page__portrait-bubble img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-page__portrait-bubble--visible {
+  opacity: 1;
+  transform: translate(-50%, calc(-50% - (var(--center-circle-size) * 0.58))) scale(1);
+}
+
+@keyframes portrait-bubble-distort {
+  0% {
+    border-radius: 49% 51% 48% 52% / 52% 48% 52% 48%;
+  }
+
+  42% {
+    border-radius: 54% 46% 53% 47% / 45% 55% 46% 54%;
+  }
+
+  70% {
+    border-radius: 47% 53% 45% 55% / 55% 46% 54% 45%;
+  }
+
+  to {
+    border-radius: 51% 49% 54% 46% / 48% 53% 47% 52%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-page__headline {
     left: calc(50% - 1.25rem);
@@ -238,6 +302,10 @@ onBeforeUnmount(() => {
     bottom: clamp(1.9rem, 5.3dvh, 4.3rem);
     transform: translateX(0);
     transition: none;
+  }
+
+  .home-page__portrait-bubble {
+    animation: none;
   }
 }
 
@@ -270,6 +338,15 @@ onBeforeUnmount(() => {
     width: var(--center-circle-size);
     padding: 2rem;
     font-size: 1rem;
+  }
+
+  .home-page__portrait-bubble {
+    width: clamp(5.25rem, 21vw, 7.25rem);
+    transform: translate(-50%, calc(-50% - (var(--center-circle-size) * 0.64))) scale(0.72);
+  }
+
+  .home-page__portrait-bubble--visible {
+    transform: translate(-50%, calc(-50% - (var(--center-circle-size) * 0.64))) scale(1);
   }
 }
 </style>

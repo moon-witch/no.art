@@ -12,6 +12,7 @@ export default defineEventHandler(async () => {
       attribution: quotes.attribution,
       reflection: quotes.reflection,
       imageAlt: quotes.imageAlt,
+      imageAssetId: quotes.imageAssetId,
       imageKey: assets.objectKey,
       desktopPlacement: quotes.desktopPlacement,
       mobilePlacement: quotes.mobilePlacement,

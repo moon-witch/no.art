@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import BubbleNavigation from '~/components/navigation/BubbleNavigation.vue'
 import LanguageSwitcher from '~/components/navigation/LanguageSwitcher.vue'
+import StudioLoginModal from '~/components/studio/StudioLoginModal.vue'
+
+const route = useRoute()
+const isStudioRoute = computed(() => route.path.startsWith('/studio'))
 </script>
 
 <template>
   <div class="app-shell">
-    <BubbleNavigation />
-    <LanguageSwitcher />
+    <BubbleNavigation v-if="!isStudioRoute" />
+    <LanguageSwitcher v-if="!isStudioRoute" />
     <NuxtPage :transition="{ name: 'scene', mode: 'out-in' }" />
+    <StudioLoginModal />
   </div>
 </template>
 
